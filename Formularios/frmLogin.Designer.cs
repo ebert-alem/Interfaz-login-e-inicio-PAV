@@ -36,6 +36,7 @@
             this.txtNom = new System.Windows.Forms.TextBox();
             this.picLogin = new System.Windows.Forms.PictureBox();
             this.txtIngresarDatos = new System.Windows.Forms.Label();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picLogin)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,19 +108,36 @@
             this.txtIngresarDatos.AutoSize = true;
             this.txtIngresarDatos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIngresarDatos.ForeColor = System.Drawing.Color.Red;
-            this.txtIngresarDatos.Location = new System.Drawing.Point(92, 323);
+            this.txtIngresarDatos.Location = new System.Drawing.Point(103, 390);
             this.txtIngresarDatos.Name = "txtIngresarDatos";
             this.txtIngresarDatos.Size = new System.Drawing.Size(179, 17);
             this.txtIngresarDatos.TabIndex = 11;
             this.txtIngresarDatos.Text = "Por favor ingresa los datos";
             this.txtIngresarDatos.Visible = false;
             // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnRegistrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.btnRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.btnRegistrar.Location = new System.Drawing.Point(129, 328);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(96, 40);
+            this.btnRegistrar.TabIndex = 12;
+            this.btnRegistrar.Text = "REGISTRAR";
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(355, 356);
+            this.ClientSize = new System.Drawing.Size(404, 442);
+            this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.txtIngresarDatos);
             this.Controls.Add(this.picLogin);
             this.Controls.Add(this.btnAcceder);
@@ -151,5 +169,6 @@
         private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.PictureBox picLogin;
         private System.Windows.Forms.Label txtIngresarDatos;
+        private System.Windows.Forms.Button btnRegistrar;
     }
 }

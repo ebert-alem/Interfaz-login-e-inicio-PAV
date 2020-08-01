@@ -13,6 +13,8 @@ namespace Clase_1_PAV
 {
     public partial class frmLogin : Form
     {
+        SqlConnection conexion = new SqlConnection("Data Source = pavtrabajoPractico.mssql.somee.com; Persist Security Info = True; User ID = fede; Password = fede1674");
+
         public frmLogin()
         {
             InitializeComponent();
@@ -39,7 +41,6 @@ namespace Clase_1_PAV
             else
             {
                 //conectar a bd
-                SqlConnection conexion = new SqlConnection("Data Source = pavtrabajoPractico.mssql.somee.com; Persist Security Info = True; User ID = fede; Password = fede1674");
 
                 try
                 {
@@ -95,6 +96,55 @@ namespace Clase_1_PAV
                 }
         
 
+            }
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            string nom = txtNom.Text;
+            string pass = txtPass.Text;
+            try
+            {
+                conexion.Open();
+                string consulta = "INSERT INTO USUARIOS (nombreUsuario,contraseña) VALUES ('" + nom + "',HASHBYTES('SHA1','" + pass + "'))";
+
+
+                SqlCommand comando = new SqlCommand(consulta, conexion);
+                int cant = comando.ExecuteNonQuery();
+
+                if (cant > 0)
+                {
+
+                    frmInicio ventana = new frmInicio();
+                    ventana.Show();
+                    conexion.Close();
+
+
+
+                }
+                else
+                {
+
+                    MessageBox.Show("Error , verifique los datos ingresados , el usuario ya existe ");
+                    conexion.Close();
+
+                }
+
+
+
+
+
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("El usuario ya existe");
+                conexion.Close();
             }
         }
     }
