@@ -48,7 +48,7 @@
             this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcceder.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAcceder.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btnAcceder.Location = new System.Drawing.Point(129, 269);
+            this.btnAcceder.Location = new System.Drawing.Point(153, 273);
             this.btnAcceder.Name = "btnAcceder";
             this.btnAcceder.Size = new System.Drawing.Size(96, 40);
             this.btnAcceder.TabIndex = 9;
@@ -123,7 +123,7 @@
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btnRegistrar.Location = new System.Drawing.Point(129, 328);
+            this.btnRegistrar.Location = new System.Drawing.Point(153, 332);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(96, 40);
             this.btnRegistrar.TabIndex = 12;
@@ -133,6 +133,7 @@
             // 
             // frmLogin
             // 
+            this.AcceptButton = this.btnAcceder;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
