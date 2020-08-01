@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -33,12 +34,66 @@ namespace Clase_1_PAV
             {
                 txtIngresarDatos.Visible = true;
             }
+
+
             else
             {
-                txtIngresarDatos.Visible = false;
-                frmInicio ventana = new frmInicio();
-                ventana.Show();
-                this.Hide();
+                //conectar a bd
+                SqlConnection conexion = new SqlConnection("Data Source = pavtrabajoPractico.mssql.somee.com; Persist Security Info = True; User ID = fede; Password = fede1674");
+
+                try
+                {
+                    // guardar variables
+                    string nom = txtNom.Text;
+                    string pass = txtPass.Text;
+                 // se abre la conexion
+                    conexion.Open();
+                    // select para ver si el usuario existe en la bd y esta bien la contraseña
+                    string consulta = "SELECT * FROM USUARIOS WHERE nombreUsuario = '" + nom + "' and contraseña = HASHBYTES('SHA1','" + pass + "')";
+
+                    SqlCommand comando = new SqlCommand(consulta, conexion);
+                    SqlDataReader lector = comando.ExecuteReader();
+                    // si hay un elemento en el select
+                    if (lector.Read())
+                    {
+
+                        string nombre = lector.GetString(0);
+                        string contra = lector.GetString(1);
+                        if (nombre != "" && contra != "")
+                        {
+                            // codigo de ebert
+                            conexion.Close();
+
+                            txtIngresarDatos.Visible = false;
+                            frmInicio ventana = new frmInicio();
+                            ventana.Show();
+                            this.Hide();
+                        }
+
+
+
+
+                    }
+                    else
+                    {
+
+                        MessageBox.Show("Usuario y/o contraseña incorrectas");
+                        conexion.Close();
+
+                    }
+
+
+
+
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("" + ex);
+                    conexion.Close();
+                }
+        
 
             }
         }
