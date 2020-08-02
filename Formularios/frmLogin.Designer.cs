@@ -48,7 +48,7 @@
             this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcceder.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAcceder.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btnAcceder.Location = new System.Drawing.Point(153, 273);
+            this.btnAcceder.Location = new System.Drawing.Point(81, 268);
             this.btnAcceder.Name = "btnAcceder";
             this.btnAcceder.Size = new System.Drawing.Size(96, 40);
             this.btnAcceder.TabIndex = 9;
@@ -108,7 +108,7 @@
             this.txtIngresarDatos.AutoSize = true;
             this.txtIngresarDatos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIngresarDatos.ForeColor = System.Drawing.Color.Red;
-            this.txtIngresarDatos.Location = new System.Drawing.Point(103, 390);
+            this.txtIngresarDatos.Location = new System.Drawing.Point(103, 322);
             this.txtIngresarDatos.Name = "txtIngresarDatos";
             this.txtIngresarDatos.Size = new System.Drawing.Size(179, 17);
             this.txtIngresarDatos.TabIndex = 11;
@@ -123,7 +123,7 @@
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btnRegistrar.Location = new System.Drawing.Point(153, 332);
+            this.btnRegistrar.Location = new System.Drawing.Point(186, 268);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(96, 40);
             this.btnRegistrar.TabIndex = 12;
@@ -137,7 +137,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(404, 442);
+            this.ClientSize = new System.Drawing.Size(355, 372);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.txtIngresarDatos);
             this.Controls.Add(this.picLogin);
